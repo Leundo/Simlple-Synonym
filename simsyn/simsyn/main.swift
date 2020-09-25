@@ -3,7 +3,7 @@
 //  simsyn
 //
 //  Created by Lzzet on 2020/9/24.
-//  Copyright © 2020 Day_s_Undoing. All rights reserved.
+//  Copyright © 2020 Leundo. All rights reserved.
 //
 
 import Foundation
