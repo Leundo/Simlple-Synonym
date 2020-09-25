@@ -22,7 +22,7 @@
     enlarge
 默认输出10个近义词。
 
-    simsyn -n 15 increase
+    $ simsyn -n 15 increase
     rise
     enhance
     grow
