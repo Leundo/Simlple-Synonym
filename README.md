@@ -3,7 +3,7 @@
 目前为版本为 `0.1.0`。
 
 ## 安装(macOS)
-    $ cd simsyn/simsyn
+    $ cd simsyn
     $ swiftc -o simsyn main.swift Request.swift Regular.swift IO.swift
 编译完成后产生目标程序 simsyn。
 把 simsyn 文件链接进入 `$PATH` 直接在 Terminal 使用。

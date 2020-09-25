@@ -1,12 +1,22 @@
+#!/usr/bin/swift
 //
 //  main.swift
 //  simsyn
 //
-//  Created by Lzzet on 2020/9/24.
+//  Created by Leundo on 2020/9/24.
 //  Copyright © 2020 Leundo. All rights reserved.
 //
 
 import Foundation
 
-print("Hello, World!")
+
+IOService.input(args: CommandLine.arguments)
+
+
+
+
+
+
+
+
 
