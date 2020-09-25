@@ -2,7 +2,7 @@
 这是一个命令行英语近义词查询工具，由 Swift 提供支持。  
 目前为版本为 `0.1.0`。
 
-## 安装(macOS)
+## 安装(macOS或Linux)
     $ cd simsyn
     $ swiftc -o simsyn main.swift Request.swift Regular.swift IO.swift
 编译完成后产生目标程序 simsyn。
