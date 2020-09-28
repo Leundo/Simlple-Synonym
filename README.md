@@ -1,6 +1,6 @@
 # Simple Synonym
 这是一个命令行英语近义词查询工具，由 Swift 提供支持。  
-目前为版本为 `0.1.0`。
+目前为版本为 `0.1.1`。
 
 ## 安装(macOS或Linux)
     $ cd simsyn
@@ -22,7 +22,7 @@
     enlarge
 默认输出10个近义词。
 
-    simsyn -n 15 increase
+    $ simsyn -n 15 increase
     rise
     enhance
     grow
