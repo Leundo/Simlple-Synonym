@@ -8,8 +8,10 @@
 
 import Foundation
 class RegexService {
-    public static let prefixRegex = "<div role=\"tooltip\" class=\"oh_oi oh_oj\"></div><a class=\"b4_co b4_b5 ta_co\" title=\""
+    // public static let prefixRegex = "<div role=\"tooltip\" class=\"oh_oi oh_oj\"></div><a class=\"b4_co b4_b5 ta_co\" title=\""
     
+    private static let prefixRegex = "<div role=\"tooltip\" class=\"n6_n7 n6_n8\"></div><a class=\"b3_co b3_b4 ta_co\" title=\""
+
     private static let rootRegex = ".+?"
     
     public static let suffixRegex = " synonym\""
