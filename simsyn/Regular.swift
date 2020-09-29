@@ -51,7 +51,7 @@ class RegexService {
     
     // 判断是否是机器人验证页面
     public static func isRobotHtml(html: String) -> Bool {
-        let data = pickUp(regex: rootRegex, aString: html)
+        let data = pickUp(regex: robotRegex, aString: html)
         if data.count > 0 {
             return true
         }
