@@ -8,13 +8,17 @@
 
 import Foundation
 class RegexService {
-    // public static let prefixRegex = "<div role=\"tooltip\" class=\"oh_oi oh_oj\"></div><a class=\"b4_co b4_b5 ta_co\" title=\""
+//    public static let prefixRegex = "<div role=\"tooltip\" class=\"oh_oi oh_oj\"></div><a class=\"b4_co b4_b5 ta_co\" title=\""
     
-    private static let prefixRegex = "<div role=\"tooltip\" class=\"n6_n7 n6_n8\"></div><a class=\"b3_co b3_b4 ta_co\" title=\""
-
+//    private static let prefixRegex = "<div role=\"tooltip\" class=\"n6_n7 n6_n8\"></div><a class=\"b3_co b3_b4 ta_co\" title=\""
+    
+    private static let prefixRegex = "<div role=\"tooltip\" class=\"[0-9a-z]{2}_[0-9a-z]{2} [0-9a-z]{2}_[0-9a-z]{2}\"></div><a class=\"[0-9a-z]{2}_[0-9a-z]{2} [0-9a-z]{2}_[0-9a-z]{2} [0-9a-z]{2}_[0-9a-z]{2}\" title=\""
+    
     private static let rootRegex = ".+?"
     
-    public static let suffixRegex = " synonym\""
+    private static let suffixRegex = " synonym\""
+    
+    private static let robotRegex = "We need to make sure you are not a robot."
     
     public static func pickUp(regex: String, aString: String) -> [String]{
         do {
@@ -36,13 +40,22 @@ class RegexService {
     
     public static func htmlPickUp(html: String) -> [String] {
         var data: [String] = []
-        data = pickUp(regex: RegexService.prefixRegex + RegexService.rootRegex + RegexService.suffixRegex, aString: html)
+        data = pickUp(regex: prefixRegex + rootRegex + suffixRegex, aString: html)
         for i in 0..<data.count {
-            data[i] = data[i].replace(ofRegex: RegexService.prefixRegex, with: "")
-            data[i] = data[i].replace(ofRegex: RegexService.suffixRegex, with: "")
+            data[i] = data[i].replace(ofRegex: prefixRegex, with: "")
+            data[i] = data[i].replace(ofRegex: suffixRegex, with: "")
         }
         
         return data
+    }
+    
+    // 判断是否是机器人验证页面
+    public static func isRobotHtml(html: String) -> Bool {
+        let data = pickUp(regex: rootRegex, aString: html)
+        if data.count > 0 {
+            return true
+        }
+        return false
     }
     
     

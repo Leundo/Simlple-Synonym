@@ -1,6 +1,6 @@
 # Simple Synonym
 这是一个命令行英语近义词查询工具，由 Swift 提供支持。  
-目前为版本为 `0.1.1`。
+目前为版本为 `0.2.0`。
 
 ## 安装(macOS或Linux)
     $ cd simsyn
@@ -40,3 +40,8 @@
     magnify
 使用 `-n` 设置输出的近义词数量，范围为 0-50。
 
+## 人机验证
+当输出以下语句时
+
+    error: be treated as a robot. go to https://www.powerthesaurus.org to finish reCAPTCHA test
+说明触发网站的反爬措施。此时只要到 https://www.powerthesaurus.org 通过谷歌人机验证即可。
